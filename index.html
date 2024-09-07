@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>emoji pride 🍒🐯💡🦚👖🍇</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Color+Emoji">
+    <script src="./emoji_pride_data.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Emoji Pride</h1>
+    <div id="forms">
+        <form target="_self">
+            <div id="osform" class="form">
+                <h3>Emoji Vendor</h3>
+                <input type="radio" id="google" name="os" value="google">
+                <label for="google">Google</label>
+                <br>
+                <input type="radio" id="apple" name="os" value="apple">
+                <label for="apple">Apple</label>
+                <br>
+                <input type="radio" id="twemoji" name="os" value="twemoji">
+                <label for="twemoji">Twemoji/Discord</label>
+            </div>
+            <div id="categoryform" class="form">
+                <h3>Emoji Categories</h3>
+                <button id="categoryselect" onclick="selectAllNone()">Deselect All</button><br><br>
+            </div>
+            <div class="form" id="flagform">
+                <h3>Pride Flag</h3>
+
+            </div>
+    </div>
+    <div class="form" id="customflagform" style="display:none;">
+        <h3 id="customheader">Custom Flag</h3>
+        <span id="stripeinput"><label for="stripes">Number of Stripes: </label><input id="stripeinputbox" type="number"
+                name="stripes" value="1" min="1">
+                <button onclick="chooseStripes()" class="backnext">→</button>
+        </span>
+        <span id="colorpickers" style="display:none;">
+        </span>
+    </div>
+    <input type="button" value="GO" id="go" onclick="onSubmit()">
+    </form>
+    </div>
+    <div id="resultsection">
+        <div style="overflow:scroll;">
+            <table id="result" style="display:none;">
+                <tr id="colorrow"></tr>
+                <tr id="imagerow"></tr>
+                <tr id="emojirow"></tr>
+            </table>
+        </div>
+        <button id="copy" style="display:none;" onclick="copyEmoji()">COPY</button>
+        <textarea id="textarea" style="visibility:hidden;"></textarea>
+    </div>
+
+
+</body>
+
+</html>
